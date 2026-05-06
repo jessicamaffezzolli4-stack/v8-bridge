@@ -1,0 +1,6 @@
+[deploy]
+startCommand = "node index.js"
+
+[[services]]
+protocol = "tcp"
+port = 3000
