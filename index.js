@@ -8,7 +8,8 @@ const app = express();
 
 app.use(express.json());
 
-   const PORT = process.env.PORT;
+   const PORT = process.env.PORT || 8080;
+
 
 
 // ------------------------------------------------------------
@@ -511,7 +512,8 @@ function montarResultado(data) {
 // ------------------------------------------------------------
 // START
 // ------------------------------------------------------------
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
+
   console.log(`✅ V8 Bridge rodando na porta ${PORT}`);
   console.log(`   Variáveis: V8_EMAIL=${V8_EMAIL ? "✓" : "⚠ NÃO DEFINIDO"} | BRIDGE_KEY=${BRIDGE_KEY ? "✓" : "⚠ NÃO DEFINIDO"}`);
 });
